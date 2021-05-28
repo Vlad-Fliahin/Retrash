@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block home %}
+    active
+{% endblock %}
+
+{% block content %}
+	<div>
+		<h1>{{ title }}</h1>
+    	<p>Main page</p>
+
+    	{% include 'main/test.html' %}
+    	{% for el in values %}
+    	<p>{{ el }}</p>
+    	{% endfor %}
+	</div>
+{% endblock %}

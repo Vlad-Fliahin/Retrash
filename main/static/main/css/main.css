@@ -1,0 +1,16 @@
+body {
+    background: #FFFFFF;
+}
+
+main {
+    min-height: 67vh;
+}
+
+footer {
+    background-color:#047aff;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
