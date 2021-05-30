@@ -1,1 +1,1 @@
-web: gunicorn ReTrash.wsgi --log-file -
+web: gunicorn ReTrash ReTrash.wsgi
