@@ -1,1 +1,1 @@
-web: gunicorn ReTrash ReTrash.wsgi
+web: gunicorn ReTrash.wsgi
