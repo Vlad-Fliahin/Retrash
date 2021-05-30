@@ -16,7 +16,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="{% url 'home' %}">Retrash</a>
+        <a class="navbar-brand" href="{% url 'main:home' %}">Retrash</a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
@@ -26,10 +26,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item {% block home %}{% endblock %}">
-                    <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home"></i> Home </a>
+                    <a class="nav-link" href="{% url 'main:home' %}"><i class="fas fa-home"></i> Home </a>
                 </li>
                 <li class="nav-item {% block about %}{% endblock %}">
-                    <a class="nav-link" href="{% url 'about' %}"><i class="far fa-address-card"></i> About us</a>
+                    <a class="nav-link" href="{% url 'main:about' %}"><i class="far fa-address-card"></i> About us</a>
+                </li>
+                <li class="nav-item {% block stats %}{% endblock %}">
+                    <a class="nav-link" href="{% url 'main:stats' %}"><i class="far fa-address-card"></i> Stats</a>
                 </li>
             </ul>
         </div>
@@ -37,6 +40,7 @@
 </header>
 
 <main>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     {% block content %}
     {% endblock %}
 </main>
